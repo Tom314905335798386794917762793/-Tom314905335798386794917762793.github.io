@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    /* Problème de marge avec le header donc on le généralise sur la page pour pas s'embeter */
+
+}
+
+
+.body {
+    background-image: url("../images/bg_ordinateurs.jpg");
+    background-repeat: no-repeat;
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+/* ----------Header---------- */
+.header {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+    background-color: dimgray;
+    background-image: url("../images/frise_bg_header.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.titre {
+    color: rgb(160, 11, 11);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+/* ----------Sommaire---------- */
+.sommaire-container {
+    position: fixed;
+    background-color: beige;
+    padding: 30px;
+    margin: 50px;
+    width: 350px;
+    height: 700px;
+    background-image: url("../images/sommaire_bg.png");
+}
+
+.sommaire-container a:link a:visited {
+    text-align: center;
+    color: aliceblue;
+}
+
+
+
+/* ----------main---------- */
+
+.main-container {
+    display: flex;
+    margin-left: 500px;
+    margin-top: 50px;
+    margin-right: 60px;
+    border-style: inset;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.titre-main h2 {
+    justify-content: center;
+    color: rgb(44, 124, 124);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+.article {
+    background-color: white;
+}
+
+p.align_centre {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 20px;
+    line-height: 1.7;
+    text-align: center;
+
+}
+p.align_droite {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 20px;
+    line-height: 1.7;
+    text-align: right;
+
+}
+p.align_gauche {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 20px;
+    line-height: 1.7;
+    text-align: left;
+
+}
+
+
+img.align_centre {
+    float: initial;
+    margin: 40px;
+
+}
+img.align_droite {
+    float: right;
+    margin: 40px;
+
+}
+img.align_gauche {
+    float: left;
+    margin: 40px;
+}
+.texte_indent {
+    text-indent: 60px;
+}
+
+.clear {
+    clear: both;
+}
+
+pre.align_gauche {
+    border: 1px solid black;
+    float: left;
+    margin: 40px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-image: url("../images/bg_code_bloc.jpg");
+}
+
+pre.align_droite {
+    border: 1px solid black;
+    float: right;
+    margin: 40px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-image: url("../images/bg_code_bloc.jpg");
+}
+
+
+.petit_titre {
+    display: flex;
+    color: rgb(70, 134, 70);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+
+.table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+    margin: 30px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 50px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+
+.element_align {
+    display: flex;
+    justify-content: space-between;
+}

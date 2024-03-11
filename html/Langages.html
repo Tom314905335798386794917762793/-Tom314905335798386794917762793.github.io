@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les langages informatique</title>
+    <link rel="stylesheet" href="../css/style_contenu.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div>
+            <h2 class="titre">Histoire de l'informatique</h2>
+        </div>
+    </header>
+
+
+    <nav class="sommaire-container">
+        <a href="#text0">Les langages de programmation</a>
+        <br><br>
+        <a href="#text1">Les premiers langages de programmation</a>
+        <br><br>
+        <a href="#text2">Les compilateurs</a>
+        <br><br>
+        <a href="#text3">Les premiers langages de haut-niveau</a>
+        <br><br>
+        <a href="#text4">Autres types de langages de programmation</a>
+        <br><br>
+        <a href="#text5">Les langages interprétés</a>
+        <br><br>
+        <a href="../html/index.html">Retour au menu</a>
+    </nav>
+
+
+    <main class="main-container">
+        <div class="article">
+            <div class="titre-main">
+                <h2 id="text0">Les langages de programmation</h2>
+                <p class="align_gauche">Comme nous l'avons vu dans la partie Histoire de l'ordinateur, les programmes et leurs langages sont essentiels pour mettre au point des projets sur les ordinateurs. La conception de langages de programmation est un sujet complexe car il relie le hardware (la partie physique de l'ordinateur) à la partie software (la partie virtuelle). Cette conception difficile a justement pour but de rendre la vie facile aux programmeurs en réduisant la complexité de la programmation et en optimisant les langages afin d'être les plus rapide et efficaces. L'informatique a donc vu plusieurs évolutions des langages informatiques qui ont permis de créer les applications virtuelles telles qu'on les connait aujourd'hui.</p>
+                <br><br>
+                <p id="text1" class="petit_titre clear">Quels étaient les premiers langages de programmations ?</p>
+                <br>
+                <p class="align_gauche">Dans les années 1940, le langage assembleur est utilisé par les premiers ordinateurs notamment l'ENIAC en 1947. L'assembleur est un langage de bas-niveau c'est-à-dire un langage qui est directement lié aux instructions machines. La raison pour laquelle il est utilisé à cette époque est qu'il est le plus facile pour les programmeurs à lire. Aujourd'hui, il est considéré comme assez complexe à l'emploi et est principalement utilisé durant le déboguage ou le reverse-engineering. L'assembleur est fait d'<strong>opcode</strong> qui servent à indiquer les instructions à exécutées. Par exemple, dans l'assembleur moderne, nous avons des programmes qui ressemblent à ça :</p>
+                <pre class="align_gauche">
+    <strong>Programme décompilé en assembleur</strong>
+   
+
+    0x0000555555555139 <+0>:     push   rbp
+    0x000055555555513a <+1>:     mov    rbp,rsp
+    0x000055555555513d <+4>:     sub    rsp,0x10
+    0x0000555555555141 <+8>:     mov    DWORD PTR [rbp-0x4],0x1
+    0x0000555555555148 <+15>:    jmp    0x555555555167 <main+46>
+    0x000055555555514a <+17>:    mov    eax,DWORD PTR [rbp-0x4]
+    0x000055555555514d <+20>:    mov    esi,eax
+    0x000055555555514f <+22>:    lea    rax,[rip+0xeae]        # 0x555555556004
+    0x0000555555555156 <+29>:    mov    rdi,rax
+    0x0000555555555159 <+32>:    mov    eax,0x0
+    0x000055555555515e <+37>:    call   0x555555555030 <printf@plt>
+    0x0000555555555163 <+42>:    add    DWORD PTR [rbp-0x4],0x1
+    0x0000555555555167 <+46>:    cmp    DWORD PTR [rbp-0x4],0x5
+    0x000055555555516b <+50>:    jle    0x55555555514a <main+17>
+    0x000055555555516d <+52>:    mov    eax,0x0
+    0x0000555555555172 <+57>:    leave
+    0x0000555555555173 <+58>:    ret</pre>
+                <br>
+                <p class="align_gauche">Dans ce programme, nous pouvons voir à gauche l'adresse mémoire des instructions stocké dans la stack (pile). Le nombre qui se trouve juste après (<+4> par exemple) est l'offset (décalage en octet) entre les adresses d'instructions. Ensuite, nous retrouvons l'instructions elle-même, par exemple <strong>push, mov ou call</strong> qui indique les opérations à faire. Et enfin, les paramètres utilisés par les instructions tels que les registres <strong>rbp, rsp ou eax</strong> et des valeurs en hexadécimal.</p>
+                <p id="text2" class="petit_titre clear">L'assembleur a également trouvé sa place dans la création de compilateur. Mais c'est quoi un compilateur ?</p>
+                <br>
+                <img src="../images/compiler.png" alt="" class="align_droite" width="300px">
+                <br><br><br><br><br><br>
+                <p class="align_gauche">Toujours dans l'optique de créer des langages de programmations les plus simples possibles, le compilateur joue un rôle crucial dans ce processus. Il est chargé de traduire les instructions de haut-niveau (écrites par le programmeur en instructions de bas-niveau que l'ordinateur peut comprendre et exécuter. La conception de compilateur est passé par un processus qu'on a appelé le <strong>bootstrapping</strong> qui consiste à créer des compilateur avec un langage que le compilateur lui-même doit interpréter. On doit donc utiliser un compilateur appelé Amorce qui traduit quelques fonctionnalités classiques afin de pouvoir créer ensuite le compilateur qu'on voulait. Un compilateur est un outil complexe mais essentiel dans la compréhension des langages de façon approfondies. C'est la raison pour laquelle le livre Dragon Book existe.</p>
+                <p id="text3" class="petit_titre clear">Mais du coup, c'est quoi les premiers langages de haut-niveau ?</p>
+                <br>
+                <p class="align_gauche">Dans les premiers langages de haut-niveau, on y compte le célèbre <strong>Fortran</strong>. Conçu en 1954, plus simple que l'asm, il permettait de faire assez facilement des boucles, des tableaux à plusieurs dimensions et avait des très bonne performances pour un langages de haut-niveau. La possibilité de le traduire grâce à un compilateur permet une meilleure portabilité.</p>
+                <pre class="align_gauche">
+    <strong>Programme en Fortran</strong>
+
+
+    program boucle
+        implicit none
+        integer :: i
+
+        do i = 1, 5
+            print *, 'La ligne ', i
+        end do
+    
+    end program boucle
+
+                </pre>
+                <br><br>
+                <p class="align_gauche">Dans ce programme, on voit que la syntaxe est beaucoup plus lisible et facile à comprendre. En effet, on voit que le programme définit une boucle dans laquelle on affiche le texte <em>La ligne i</em> où i est un nombre allant de 1 à 5</p>
+                <p class="align_gauche clear">S'en suit un tas de langages performants mais tous bien différents tel que le COBOL en 1959, le BASIC en 1964 ou encore le Pascal en 1970. Ces langages ont tous des avantages d'être utilisés et sont spécialisés dans plusieurs domaines ce qui laisse le choix au programmeur d'utiliser ce dont il a besoin.</p>
+                <div class="element_align">
+                    <pre class="align_gauche">
+    <strong>Programme en COBOL</strong>
+
+
+    IDENTIFICATION DIVISION.
+    PROGRAM-ID. Boucle.
+
+    DATA DIVISION.
+    WORKING-STORAGE SECTION.
+    01 i PIC 9(3).
+
+    PROCEDURE DIVISION.
+        PERFORM VARYING i FROM 1 BY 1 UNTIL i > 5
+            DISPLAY "La ligne " i
+        END-PERFORM.
+        STOP RUN.
+                    </pre>
+                    <pre class="align_gauche">
+    <strong>Programme en BASIC</strong>
+
+
+    10 FOR i = 1 TO 5
+    20     PRINT "La ligne "; i
+    30 NEXT i
+
+                    </pre>
+                    <pre class="align_gauche">
+    <strong>Programme en Pascal</strong>
+
+
+    program Boucle;
+
+    var
+    i: integer;
+        
+    begin
+    for i := 1 to 5 do
+        writeln('La ligne ', i);
+    end.
+        
+                    </pre>
+                </div>
+                <pre class="align_droite">
+    <strong>Programme en C</strong>
+                
+                
+    #include <stdio.h>
+                
+        int main(){
+            for(int i = 1; i < 6; i++){
+                printf("Ligne %d\n", i);
+            };
+            return 0;
+        }
+                </pre>
+                <br><br>
+                <p class="align_gauche">En 1969, dans les laboratoires Bell, la conception d'un système d'exploitation nommé Unix (qui a inspiré la conception du kernel Linux utilisé par beaucoup d'appareil aujourd'hui) a requis la création d'un langage appelé le C. C'est un langage compilé de haut-niveau très flexible et complet qui est très largement utilisé depuis maintenant plus de 50 ans. Il est plus ou moins le résultat final des langages compilés et un des plus performants. Il est également facile à prendre en main.</p>
+                <p id="text4" class="petit_titre clear">Quels sont les autres types de langage de programmation ?</p>
+                <br>
+                <p class="align_gauche">On retrouve les langages déclaratifs qui décrivent comment les éléments doivent être. Contrairement aux langages compilés, les langages déclaratifs ne sont pas réellement des instructions mais plutôt des descriptions ou des caractéristiques d'éléments. Ils sont souvent utilisés dans le traitement de données ou de requête. En 1978, le langage SQL est créer afin de gérer des requêtes à des bases de données. C'est un langage de programmation presque littéraire.</p>
+                <pre class="align_gauche">
+    <strong>Programme en SQL</strong>
+
+
+    SELECT u.nom, c.id_commande, c.montant
+    FROM utilisateurs u
+    JOIN commandes c ON u.id = c.id_utilisateur
+    WHERE u.age > 25;
+                </pre>
+                <br><br>
+                <p class="align_gauche">Ce programme en SQL demande à une base de donnée les valeurs qui se trouvent dans les colonnes nom, id_command et montant pour toute les personnes ayant plus de 25ans. On effectue une jointure afin de lier des éléments de 2 tables différentes.</p>
+                <br><br>
+                <img src="../images/html_script.png" alt="" class="align_droite" width="470px">
+                <br><br>
+                <p class="align_gauche">Dans les langages déclaratifs, les langages à balise sont aussi très important, bien qu'arrivés un peu plus tard. Le HTML par exemple créé dans les années 1990, est utilisé afin de créer des sites internet.</p>
+                <p id="text5" class="petit_titre clear">Et les langages interprété alors ?</p>
+                <br>
+                <p class="align_gauche">Plutôt que de traduire au préalable tout le programme avec un compilateur, les interpréteurs traduisent et exécutent à la volée les instructions données. Ces langages nécessitent une <strong> Virtual Machine Application</strong> qui permet d'exécuter les instructions sans passé par les spécifications de l'architecture de la machine hôte. Cela signifie que peu importe la machine sur laquelle le programme est exécuté, il sera exécuté de la même façon. La machine virtuelle prend en entré le programme écrit en langage interprété et est interprété en bytecode qui est ensuite exécuté. Parmis ces langages, on y trouve Python créé en 1991, Ruby et Lua en 1993, Java ou encore PHP en 1995.</p>
+                <div class="element_align">
+                    <pre class="align_gauche">
+    <strong>Programme en Python</strong>
+
+
+    for i in range(1,6):
+        print("La ligne", i)
+                    </pre>
+                    <pre class="align_gauche">
+    <strong>Programme en Ruby</strong>
+
+
+    (1..5).each do |i|
+        puts "La ligne #{i}"
+    end
+                    </pre>
+                    <pre class="align_gauche">
+    <strong>Programme en Lua</strong>
+
+
+    for i = 1, 5 do
+        print("La ligne " .. i)
+    end
+                    </pre>
+                    <pre class="align_gauche">
+    <strong>Programme en PHP</strong>
+
+
+    &lt;?php
+    for ($i = 1; $i <= 5; $i++) {
+        echo &quot;La ligne $i\n&quot;;
+    }
+    ?&gt;
+                    </pre>
+                </div>
+                <p class="align_gauche">Ces langages de programmation offrent des fonctionnalités simples pour créer des scripts rapide pour les tâches du quotidien. Ils permettent aussi d'utiliser des fonctionnalités un peu plus avancées tel que la gestion automatique de mémoire ou même la détermination automatique de type de donnée.</p>
+                <p class="align_gauche">Finalement, tous ces langages de programmation permettent aux programmeurs de choisir parmis le vaste paysage de fonctionnalité celles dont il a besoin. La facilité de programmation permet de créer de grandes choses plus rapidement, de manière efficace et parfois sécurisé.</p>
+                <br><br>
+            </div>
+
+        </div>
+            
+
+
+    </main>
+</body>
+
+</html>
