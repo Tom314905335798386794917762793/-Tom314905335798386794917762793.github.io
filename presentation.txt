@@ -1,0 +1,27 @@
+
+
+
+
+
+Pour les pages de présentation :
+
+Création d'un sommaire.
+	
+J'ai utilisé dans le fichier HTML une balise <var> afin de créer des liens proprement vers d'autre sections de la page.
+Dans le fichier css, je lui ai mis une classe "sommaire-container" mais je ne lui ai pas attribué de paramètre "display: flex". 
+Au lieu de ça, j'ai simplement défini sa taille avec width et height ainsi que la distance avec les autres éléments de la page.
+Je voulais que le sommaire soit fixe sur la page pour pouvoir y accéder rapidement donc je suis ai donné le paramètre "position: fixed".
+Pour créer les liens, j'ai mit des balises a avec des paramètre href pour renvoyer l'utilisateur vers les éléments de la page que j'ai défini avec un id.
+
+Création de bloc de code dans le fichier Langages.
+L'utilisation de balise <pre> est nécessaire car si on met simplement les programme à afficher dans des balises <a>, le texte pourrai être interprété comme du code dans la page.
+Il faut également prendre en compte que le code à afficher aura utiliser les tabulations du code HTML.
+
+
+Pour la page d'index :
+
+Pour que les 3 images s'alignent au milieu, j'ai utilisé display: flex dans le fichier css ainsi que le paramètre justify-content: center; pour définir leur position entre eux.
+J'ai également défini chaque images avec la même classe pour définir proprement leur position, leur taille et leur distance.
+Afin que l'image s'assombrise avec le bloc mais pas le texte, j'ai du utiliser "transition: background-color 0.3s ease" pour appeler le paramètre background-color avec un effet ease de 0.3s. 
+J'ai ensuite défini ce paramètre avec ".lien:hover .effect {background-color: rgba(0, 0, 0, 0.5);" pour que quand on passe la sourie dessus, effect s'active avec le paramètre background-color.
+Le texte ne va donc pas s'assombrir puisqu'on change seulement le voile du fond.
