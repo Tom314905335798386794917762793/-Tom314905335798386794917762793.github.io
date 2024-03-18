@@ -14,7 +14,7 @@ Je voulais que le sommaire soit fixe sur la page pour pouvoir y accéder rapidem
 Pour créer les liens, j'ai mit des balises a avec des paramètre href pour renvoyer l'utilisateur vers les éléments de la page que j'ai défini avec un id.
 
 Création de bloc de code dans le fichier Langages.
-L'utilisation de balise <pre> est nécessaire car si on met simplement les programme à afficher dans des balises <a>, le texte pourrai être interprété comme du code dans la page.
+L'utilisation de balise <pre> est nécessaire car si on met simplement les programme à afficher dans des balises <a>, le texte pourrai être interprété comme du code dans la page. C'est d'ailleurs grâce à cette idée que certaine vulnérabilité web sont possibles.
 Il faut également prendre en compte que le code à afficher aura utiliser les tabulations du code HTML.
 
 
